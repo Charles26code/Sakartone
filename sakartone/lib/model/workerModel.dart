@@ -1,10 +1,10 @@
-import 'dart:ffi';
+///import 'dart:ffi';
 
 class Worker {
   String firstname;
   String lastname;
   String embauche;
-  Float salaireJ;
+  double salaireJ;
   List<String> workDay;
   String team;
 
