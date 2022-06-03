@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 
 
 class DataProvider extends StatelessWidget {
-  static const routeName = '/data';
+  static const routeName = '/addworker';
   const DataProvider({Key? key}) : super(key: key);
 
   @override
@@ -17,6 +17,8 @@ class DataProvider extends StatelessWidget {
     //List<Worker> workers = Worker(firstname: "firstname", lastname: "lastname", embauche: "embauche", salaireJ: 60.0, workDay: ["workDay"], team: "team") as List<Worker>;
     //List<Worker> workers=[Worker(firstname: "Adrien",lastname: "Lamé", embauche: "07/10/2022", salaireJ: 60.23, workDay: ["Lundi","Mardi","Jeudi"],team:"carton")];
     List<Worker> workers = dataworker;
+    double salaires = calcule_charge_salairial(workers);
+    print(salaires);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Données depuis la base de données'),
@@ -35,4 +37,11 @@ class DataProvider extends StatelessWidget {
 
     );
   }
+
+  double calcule_charge_salairial(List<Worker> employeeList) {
+  double chargeSalariale = 0;
+  employeeList.forEach((element) =>
+      chargeSalariale += (element.salaireJ) * element.workDay.length);
+  return chargeSalariale;
+}
 }
