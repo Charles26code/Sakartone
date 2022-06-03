@@ -1,3 +1,4 @@
+import './../model/workerModel.dart';
 
 List<Worker> workers = [
   Worker(

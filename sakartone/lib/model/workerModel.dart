@@ -5,6 +5,7 @@ class Worker {
   String lastname;
   String embauche;
   Float salaireJ;
+  List<String> workDay;
   String team;
 
   Worker({
@@ -12,6 +13,7 @@ class Worker {
     required this.lastname,
     required this.embauche,
     required this.salaireJ,
+    required this.workDay,
     required this.team,
   });
 
@@ -20,6 +22,7 @@ class Worker {
         lastname = json['lastname'],
         embauche = json['embauche'],
         salaireJ = json['salaireJ'],
+        workDay = json['workDay'],
         team = json['team'];
 
   Map<String, dynamic> toJson() {
@@ -28,11 +31,12 @@ class Worker {
       'lastname': lastname,
       'embauche': embauche,
       'salaireJ': salaireJ,
+      'workDay': workDay,
       'team': team,
     };
   }
 
   String showWorker() {
-    return "$firstname\n$lastname\n$embauche\n$salaireJ\n$team\n";
+    return "$firstname\n$lastname\n$embauche\n$salaireJ\n$workDay\n$team\n";
   }
 }
