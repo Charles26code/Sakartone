@@ -1,6 +1,6 @@
 
-List<Salarie> salaries = [
-  Salarie(
+List<Worker> workers = [
+  Worker(
     firstname: 'Leo',
     lastname: 'Petit',
     embauche: '2021-03-03',
@@ -8,7 +8,7 @@ List<Salarie> salaries = [
     workDay: ['L','Ma','Me','J','V'],
     team: 'carton',
   ),
-  Salarie(
+  Worker(
     firstname: 'Gabriel',
     lastname: 'Durant',
     embauche: '2021-04-04',
@@ -16,7 +16,7 @@ List<Salarie> salaries = [
     workDay: ['L','Ma','Me','J','V'],
     team: 'scotch',
   ),
-  Salarie(
+  Worker(
     firstname: 'Raphael',
     lastname: 'Bernard',
     embauche: '2021-05-05',
@@ -24,7 +24,7 @@ List<Salarie> salaries = [
     workDay: ['L','Ma','Me','J','V'],
     team: 'client',
   ),
-  Salarie(
+  Worker(
     firstname: 'Arthur',
     lastname: 'Dubois',
     embauche: '2021-03-13',
@@ -32,7 +32,7 @@ List<Salarie> salaries = [
     workDay: ['Me','J','V','S','D'],
     team: 'carton',
   ),
-  Salarie(
+  Worker(
     firstname: 'Mael',
     lastname: 'Moreau',
     embauche: '2021-04-14',
@@ -40,7 +40,7 @@ List<Salarie> salaries = [
     workDay: ['Me','J','V','S','D'],
     team: 'scotch',
   ),
-  Salarie(
+  Worker(
     firstname: 'Lucas',
     lastname: 'Bernard',
     embauche: '2021-04-14',
@@ -48,7 +48,7 @@ List<Salarie> salaries = [
     workDay: ['Me','J','V','S','D'],
     team: 'client',
   ),
-  Salarie(
+  Worker(
     firstname: 'Jules',
     lastname: 'Richard',
     embauche: '2021-05-25',

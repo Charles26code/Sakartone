@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import './../model/workerModel.dart';
+
+class DataProvider extends StatelessWidget {
+  static const routeName = '/data';
+  const DataProvider({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    List<Profile> profiles = Provider.of<ProfileProvider>(context).profiles;
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Données depuis la base de données'),
+      ),
+      body: ListView.separated(
+        itemCount: profiles.length,
+        itemBuilder: (context, index) {
+          return Text(profiles[index].showProfile());
+        },
+        separatorBuilder: (context, index) {
+          return const Divider(
+            height: 15,
+          );
+        },
+      ),
+
+      // profiles.map((profile) => profile.showProfile()).toString())),
+    );
+  }
+}
